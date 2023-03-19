@@ -41,6 +41,7 @@
     "lint": "tsc && eslint --cache 'src/**/*.ts'",
     "format": "prettier --ignore-path .gitignore --write '**/*.+(js|ts|json|md)'",
     "test": "echo \"Ok: no test specified\" && exit 0",
+    "release": "semantic-release",
     "prepare": "is-ci || husky install",
     "pre-commit": "lint-staged",
     "commitlint": "commitlint --edit $1",
