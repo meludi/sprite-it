@@ -100,8 +100,8 @@ $ npm run sprite-it -- --help
 [commitizen-badge]: https://img.shields.io/badge/commitizen-friendly-brightgreen.svg
 [commitizen-link]: http://commitizen.github.io/cz-cli/
 [doc-badge]: https://img.shields.io/badge/docs-readme-orange.svg?style=flat-square
-[npm-badge]: https://img.shields.io/npm/v/@eludi/sprite-it.svg
-[npm-link]: https://www.npmjs.com/package/@eludi/sprite-it
+[npm-badge]: https://img.shields.io/npm/v/@meludi/sprite-it.svg
+[npm-link]: https://www.npmjs.com/package/@meludi/sprite-it
 [issues-badge]: https://img.shields.io/github/issues/meludi/sprite-it
 [issues-link]: https://github.com/meludi/stylelint-config/issues
 [license-badge]: https://img.shields.io/github/license/meludi/sprite-it
