@@ -1,0 +1,19 @@
+{
+  "setup": {
+    "inputDir": "example/icons",
+    "outputDir": "dist/public",
+    "spriteName": "sprite.svg",
+    "manifest": ".sprite-it.manifest.json"
+  },
+  "presets": {
+    "minifyStyles": true,
+    "removeUselessDefs": true,
+    "removeNonInheritableGroupAttrs": true,
+    "removeTitle": true,
+    "cleanupAttrs": true,
+    "removeMetadata": true,
+    "removeDoctype": true,
+    "removeXMLProcInst": true,
+    "collapseGroups": true
+  }
+}

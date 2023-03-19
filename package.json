@@ -1,0 +1,96 @@
+{
+  "name": "@meludi/sprite-it",
+  "version": "0.0.0-semantic-release",
+  "description": "Combines multiple named SVG files into one sprite.svg using <symbol>.",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "sprite",
+    "svg",
+    "svgs",
+    "svgstore",
+    "symbol",
+    "symbols"
+  ],
+  "author": {
+    "email": "milad@al-ani.de",
+    "name": "Milad Al-Ani"
+  },
+  "type": "module",
+  "module": "dist/bin/sprite-it.js",
+  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "bin": {
+    "sprite-it": "dist/bin/sprite-it.js"
+  },
+  "files": [
+    "dist",
+    "config",
+    "CHANGELOG.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev:src": "ts-node --esm src/bin/sprite-it.ts --record",
+    "dev:dist": "node dist/bin/sprite-it.js --record",
+    "build": "rimraf dist && npm run build:tsup",
+    "build:tsup": "tsup src",
+    "build:dev": "npm run build:fast -- --watch",
+    "build:fast": "npm run build:tsup -- --no-dts",
+    "lint": "tsc && eslint --cache 'src/**/*.ts'",
+    "format": "prettier --ignore-path .gitignore --write '**/*.+(js|ts|json|md)'",
+    "test": "echo \"Ok: no test specified\" && exit 0",
+    "prepare": "is-ci || husky install",
+    "pre-commit": "lint-staged",
+    "commitlint": "commitlint --edit $1",
+    "commit": "git cz"
+  },
+  "lint-staged": {
+    "*.js": "npm run lint"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^10.0.0",
+    "cosmiconfig": "^8.0.0",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^11.1.0",
+    "lodash": "^4.17.21",
+    "os-name": "^5.1.0",
+    "svgstore": "^3.0.1",
+    "update-notifier": "^6.0.2"
+  },
+  "devDependencies": {
+    "@meludi/conventional-commits-config": "^1.0.0",
+    "@meludi/eslint-config-prettier": "^0.1.3",
+    "@meludi/eslint-config-ts-base": "^0.1.2",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@types/fs-extra": "^11.0.1",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.14.1",
+    "@types/update-notifier": "^6.0.2",
+    "eslint": "^8.35.0",
+    "prettier": "^2.8.4",
+    "rimraf": "^4.1.2",
+    "semantic-release": "^20.1.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "homepage": "https://github.com/meludi/sprite-it.git#readme",
+  "bugs": "https://github.com/meludi/sprite-it.git/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meludi/sprite-it.git"
+  }
+}
