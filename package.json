@@ -1,6 +1,6 @@
 {
   "name": "@meludi/sprite-it",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Combines multiple named SVG files into one sprite.svg using <symbol>.",
   "private": false,
   "license": "MIT",
